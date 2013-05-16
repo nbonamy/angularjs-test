@@ -3,15 +3,15 @@ var app = angular.module('Banking', [ 'ngResource' ]);
 
 app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/transactions', {
-		templateUrl: 'partials/transactionList.html',
+		templateUrl: 'app/partials/transactionList.html',
 		controller: 'TransactionListController'
 	})
 	.when('/transactions/:transactionId', {
-		templateUrl: 'partials/transactionDetail.html',
+		templateUrl: 'app/partials/transactionDetail.html',
 		controller: 'TransactionDetailController'
 	})
 	.when('/about', {
-		templateUrl: 'partials/about.html'
+		templateUrl: 'app/partials/about.html'
 	})
 	.otherwise({
 		redirectTo: '/transactions'
