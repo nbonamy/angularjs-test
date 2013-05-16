@@ -4,16 +4,15 @@ basePath = '../';
 files = [
   JASMINE,
   JASMINE_ADAPTER,
-  REQUIRE,
-  REQUIRE_ADAPTER,
-  { pattern: 'app/lib/jquery-2.0.0.min.js', included: false },
-  { pattern: 'app/lib/angular.min.js', included: false },
-  { pattern: 'app/lib/angular-resource.js', included: false },
-  { pattern: 'app/lib/moment.min.js', included: false },
-  { pattern: 'app/lib/moment-fr.js', included: false },
-  { pattern: 'app/lib/accounting.min.js', included: false },
-  { pattern: 'app/lib/jquery.bootstrap-growl.min.js', included: false },
-  { pattern: 'app/js/*.js', included: false },
+  'app/lib/jquery-2.0.0.min.js',
+  'app/lib/angular.min.js',
+  'app/lib/angular-mocks.js',
+  'app/lib/angular-resource.js',
+  'app/lib/moment.min.js',
+  'app/lib/moment-fr.js',
+  'app/lib/accounting.min.js',
+  'app/lib/jquery.bootstrap-growl.min.js',
+  'app/js/**/*.js',
   'test/unit/**/*.js'
 ];
 
