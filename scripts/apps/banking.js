@@ -48,6 +48,20 @@ app.filter('date', function() {
 	}
 });
 
+// price validation
+app.directive('validPrice', function() {
+	return {
+		require: "ngModel",
+		link: function(scope, elm, attrs, ctrl) {
+			var regex=/^\d*\.?\d{0,2}$/;
+			ctrl.$parsers.unshift(function(viewValue) {
+				ctrl.$setValidity('validPrice', regex.test(viewValue));
+				return viewValue;
+			});
+		}
+	};
+});
+
 // growl
 app.setConfirm = function(message) {
 	$.bootstrapGrowl(message, { type: 'success'});

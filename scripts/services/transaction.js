@@ -2,9 +2,7 @@
 var rootUrl = 'ws/transaction/';
 	
 app.factory('TransactionResource', function($resource) {
-	
-	return $resource('ws/transaction/:id');
-
+	return $resource(rootUrl + ':id');
 });
 
 app.factory('TransactionService', function($http, $resource) {

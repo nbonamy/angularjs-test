@@ -1,5 +1,6 @@
 <?php
 header('Content-type: application/json');
+header("Cache-Control: no-cache, must-revalidate");
 require('../includes/banking.php');
 
 //header('HTTP/1.1 500 Internal Server Error');
