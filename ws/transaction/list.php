@@ -1,6 +1,6 @@
 <?php
 header('Content-type: application/json');
-require('../../includes/banking.php');
+require('../includes/banking.php');
 
 //header('HTTP/1.1 500 Internal Server Error');
 //echo('An error occured');

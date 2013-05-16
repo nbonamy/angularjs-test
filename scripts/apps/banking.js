@@ -1,6 +1,22 @@
 
 var app = angular.module('Banking', [ 'ngResource' ]);
 
+app.config(['$routeProvider', function($routeProvider) {
+	$routeProvider.when('/transactions', {
+		templateUrl: 'partials/transactionList.html',
+		controller: 'TransactionListController'
+	})
+	.when('/transactions/:transactionId', {
+		templateUrl: 'partials/transactionDetail.html',
+		controller: 'TransactionDetailController'
+	})
+	.when('/about', {
+		templateUrl: 'partials/about.html'
+	})
+	.otherwise({
+		redirectTo: '/transactions'
+	});
+}]);
 
 // configure accounting
 accounting.settings = {
@@ -31,3 +47,13 @@ app.filter('date', function() {
 		return moment(date, "YYYY-MM-DD HH:mm:ss").format("L");
 	}
 });
+
+// growl
+app.setConfirm = function(message) {
+	$.bootstrapGrowl(message, { type: 'success'});
+}
+
+// error
+app.setError = function(message) {
+	$.bootstrapGrowl(message, { type: 'error'});
+}

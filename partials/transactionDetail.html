@@ -1,0 +1,27 @@
+<div class="row">
+
+	<table class="span8 offset2">
+		<tbody>
+			<tr>
+				<th class="line-label">Date</th>
+				<td><input type="text" data-ng-model="transaction.instant"/></td>
+			</tr>
+			<tr>
+				<th class="line-label">Description</th>
+				<td><input type="text" data-ng-model="transaction.description"/></td>
+			</tr>
+			<tr>
+				<th class="line-label">Amount</th>
+				<td><input type="text" data-ng-model="transaction.amount"/></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<button class="btn btn-success" data-ng-click="save()">Save</button>
+					<button class="btn btn-danger" data-ng-click="backToList()">Cancel</button>
+				</td>
+		</tbody>
+	
+	</table>
+
+</div>

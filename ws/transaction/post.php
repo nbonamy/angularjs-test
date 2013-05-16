@@ -1,6 +1,6 @@
 <?php
 header('Content-type: application/json');
-require('../../includes/banking.php');
+require('../includes/banking.php');
 
 // check input
 $input = json_decode(file_get_contents('php://input'));
