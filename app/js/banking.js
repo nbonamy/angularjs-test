@@ -1,6 +1,7 @@
 
 var app = angular.module('Banking', [ 'ngResource' ]);
 
+// routing
 app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/transactions', {
 		templateUrl: 'app/partials/transactionList.html',
@@ -17,6 +18,25 @@ app.config(['$routeProvider', function($routeProvider) {
 		redirectTo: '/transactions'
 	});
 }]);
+
+// price validation
+app.directive('validPrice', function() {
+	return {
+		require: "ngModel",
+		link: function(scope, elm, attrs, ctrl) {
+			var regex=/^\d*\.?\d{0,2}$/;
+			ctrl.$parsers.unshift(function(viewValue) {
+				if (regex.test(viewValue)) {
+					ctrl.$setValidity('validPrice', true);
+					return viewValue;
+				} else {
+					ctrl.$setValidity('validPrice', false);
+					return undefined;
+				}
+			});
+		}
+	};
+});
 
 // configure accounting
 accounting.settings = {
@@ -46,20 +66,6 @@ app.filter('date', function() {
 	return function(date) {
 		return moment(date, "YYYY-MM-DD HH:mm:ss").format("L");
 	}
-});
-
-// price validation
-app.directive('validPrice', function() {
-	return {
-		require: "ngModel",
-		link: function(scope, elm, attrs, ctrl) {
-			var regex=/^\d*\.?\d{0,2}$/;
-			ctrl.$parsers.unshift(function(viewValue) {
-				ctrl.$setValidity('validPrice', regex.test(viewValue));
-				return viewValue;
-			});
-		}
-	};
 });
 
 // growl

@@ -5,5 +5,5 @@ app.controller('TransactionListController', function($scope, TransactionResource
 	}, function() {
 		app.setError('An error occured while retrieving the transaction list');
 	});
-		
+	
 });
