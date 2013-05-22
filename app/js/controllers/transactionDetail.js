@@ -3,7 +3,7 @@ app.controller('TransactionDetailController', function($scope, $routeParams, $lo
 
 	$scope.backToList = function() {
 		$location.path('transactions');
-	}
+	};
 	
 	// save selected transaction
 	$scope.save = function() {
@@ -15,7 +15,7 @@ app.controller('TransactionDetailController', function($scope, $routeParams, $lo
 			app.setError('An error occured while updating the transaction');
 		});
 		
-	}
+	};
 	
 	// initialize
 	var transaction = TransactionResource.get({id:$routeParams.transactionId}, function() {

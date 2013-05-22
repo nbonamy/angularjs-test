@@ -52,28 +52,28 @@ accounting.settings = {
 		thousand: " ",
 		decimal : ","
 	}
-}
+};
 
 // money format with accounting.js
 app.filter('amount', function() {
 	return function(amount) {
 		return accounting.formatMoney(amount);
-	}
+	};
 });
 
 // date formatting
 app.filter('date', function() {
 	return function(date) {
 		return moment(date, "YYYY-MM-DD HH:mm:ss").format("L");
-	}
+	};
 });
 
 // growl
 app.setConfirm = function(message) {
 	$.bootstrapGrowl(message, { type: 'success'});
-}
+};
 
 // error
 app.setError = function(message) {
 	$.bootstrapGrowl(message, { type: 'error'});
-}
+};
