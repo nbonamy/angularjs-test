@@ -5,19 +5,6 @@ describe('Banking:Controllers', function() {
 	// get application
 	beforeEach(module('Banking'));
 
-	// the mock data
-	var transactions = [{
-		"id" : "1",
-		"instant" : "2013-01-01 00:00:00",
-		"description" : "Internet",
-		"amount" : "1"
-	}, {
-		"id" : "2",
-		"instant" : "2013-01-02 00:00:00",
-		"description" : "Courses",
-		"amount" : "2"
-	}];
-	
 	// get a mock HTTP backend
 	var $httpBackend;
 	beforeEach(angular.mock.inject(function($injector) {

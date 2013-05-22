@@ -7,7 +7,14 @@ require('../includes/banking.php');
 //echo('An error occured');
 //exit();
 
+function as_array($transaction) {
+  return $transaction->as_array();
+}
+
 $transactions = Model::factory('Transaction')->order_by_asc('instant')->order_by_asc('description')->find_many();
-echo json_encode(array_map(function($transaction) {
-    return $transaction->as_array();
-}, $transactions));
+echo json_encode(
+  array_map(
+    'as_array',
+    $transactions
+  )
+);

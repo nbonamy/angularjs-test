@@ -21,7 +21,7 @@
 			</thead>		
 			
 			<tbody>
-				<tr data-id="{{ trans.id }}" data-ng-repeat="trans in transactions | filter:filterText">
+				<tr class="transaction" data-id="{{ trans.id }}" data-ng-repeat="trans in transactions | filter:filterText">
 					<th>{{ trans.instant|date }}</th>
 					<td><a data-ng-href="#/transactions/{{ trans.id }}">{{ trans.description }}</a></td>
 					<td class="amount">{{ trans.amount|amount }}</td>
