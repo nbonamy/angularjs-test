@@ -22,7 +22,7 @@ app.config(['$routeProvider', function($routeProvider) {
 // price validation
 app.directive('validPrice', function() {
 	return {
-		require: "ngModel",
+		require: 'ngModel',
 		link: function(scope, elm, attrs, ctrl) {
 			var regex=/^\d*\.?\d{0,2}$/;
 			ctrl.$parsers.unshift(function(viewValue) {
@@ -37,6 +37,7 @@ app.directive('validPrice', function() {
 		}
 	};
 });
+
 
 // configure accounting
 accounting.settings = {
