@@ -71,10 +71,10 @@ app.filter('date', function() {
 
 // growl
 app.setConfirm = function(message) {
-	$.bootstrapGrowl(message, { type: 'success'});
+	$.bootstrapGrowl(message, { type: 'success'} );
 };
 
 // error
 app.setError = function(message) {
-	$.bootstrapGrowl(message, { type: 'error'});
+	$.bootstrapGrowl(message, { type: 'error'} );
 };

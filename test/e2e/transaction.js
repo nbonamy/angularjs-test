@@ -2,11 +2,11 @@
 describe('Banking:Transactions', function() {
 
 	beforeEach(function() {
-		browser().navigateTo('/index-e2e.html');
+		browser().navigateTo('/index.html');
 	});
 
 	it('should have the right title', function() {
-		expect(element('title').text()).toEqual('Angular Transactions Test');		
+		expect(element('title').text()).toEqual('Angular Transactions');		
 	});
 	
 	it('should redirect to transactions view', function() {
@@ -14,7 +14,7 @@ describe('Banking:Transactions', function() {
 	});
 
 	it('should list 5 transactions', function() {
-		expect(repeater('tr.transaction').count()).toEqual(2);
+		expect(repeater('tr.transaction').count()).toEqual(5);
 	});
 	
 	it('should link to transaction detail', function() {

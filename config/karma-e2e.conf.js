@@ -16,7 +16,7 @@ browsers = ['Chrome'];
 urlRoot = '/__tests/';
 
 proxies = {
-  '/': 'http://localhost/angular/',
+  '/': 'http://localhost/angular/'
 };
 
 logLevel = LOG_DEBUG;
