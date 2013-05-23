@@ -14,14 +14,14 @@
 		
 			<thead>
 				<tr>
-					<th>Date</th>
-					<th>Description</th>
-					<th>Amount</th>
+					<th><a data-ng-click="sortOrder='instant'">Date</a></th>
+					<th><a data-ng-click="sortOrder='description'">Description</a></th>
+					<th><a data-ng-click="sortOrder='amount'">Amount</a></th>
 				</tr>
 			</thead>		
 			
 			<tbody>
-				<tr class="transaction" data-id="{{ trans.id }}" data-ng-repeat="trans in transactions | filter:filterText">
+				<tr class="transaction" data-id="{{ trans.id }}" data-ng-repeat="trans in transactions | orderBy:sortOrder | filter:filterText">
 					<th>{{ trans.instant|date }}</th>
 					<td><a data-ng-href="#/transactions/{{ trans.id }}">{{ trans.description }}</a></td>
 					<td class="amount">{{ trans.amount|amount }}</td>

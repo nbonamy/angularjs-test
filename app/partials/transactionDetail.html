@@ -8,11 +8,17 @@
 			</tr>
 			<tr>
 				<th class="line-label">Description</th>
-				<td><input type="text" data-ng-model="transaction.description" required/></td>
+				<td>
+					<input type="text" name="desc" data-ng-model="transaction.description" required/>
+					<span class="label label-important" data-ng-show="form.desc.$error.required">Required</span>
+				</td>
 			</tr>
 			<tr>
 				<th class="line-label">Amount</th>
-				<td><input type="text" data-ng-model="transaction.amount" data-valid-price/></td>
+				<td>
+					<input type="text" name="amount" data-ng-model="transaction.amount" data-valid-price/>
+					<span class="label label-important" data-ng-show="form.amount.$error.validPrice">Invalid</span>
+				</td>
 			</tr>
 			<tr>
 				<td>&nbsp;</td>
