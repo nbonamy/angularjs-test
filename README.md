@@ -13,3 +13,5 @@ AngularJS features explored:
 - e2e testing
 
 The running app can be seen on http://www.bonamy.fr/angular
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/a5bfa449dd1d51653f436996b3930feb "githalytics.com")](http://githalytics.com/nbonamy/angularjs-test)
