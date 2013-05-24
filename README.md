@@ -8,6 +8,7 @@ AngularJS features explored:
 - Routing
 - $resource
 - Custom formatting directives
+- jQuery UI Date picker based directive
 - Custom validation
 - Unit testing
 - e2e testing
