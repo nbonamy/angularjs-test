@@ -4,7 +4,9 @@
 		<tbody>
 			<tr>
 				<th class="line-label">Date</th>
-				<td><input type="text" data-ng-model="transaction.instant"/></td>
+				<td><input type="text" datepicker data-ng-model="transaction.instant" /></td>
+				<!-- The date picker directive can be instantiated as a tag or as a property -->
+				<!-- <td><datepicker data-ng-model="transaction.instant" /></td> -->
 			</tr>
 			<tr>
 				<th class="line-label">Description</th>
