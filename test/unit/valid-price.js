@@ -24,29 +24,32 @@ describe('Banking', function() {
 
 		// shortcut
 		function shouldValidate(price) {
-			return validate(price, 'validate', price);
+			validate(price, 'validate', price);
 		}
 		
 		// shortcut
 		function shouldNotValidate(price) {
-			return validate(price, 'not validate', undefined);
+			validate(price, 'not validate', undefined);
 		}
 		
 		// valid tests
 		shouldValidate('0');
 		shouldValidate('1');
+		shouldValidate('-1');
 		shouldValidate('1.');
 		shouldValidate('1.1');
 		shouldValidate('1.11');
 		shouldValidate('11.1');
 		shouldValidate('11.11');
+		shouldValidate('-11.11');
 		shouldValidate('.1');
 		shouldValidate('.11');
+		shouldValidate('-.11');
 
 		// invalid tests
 		shouldNotValidate('a');
 		shouldNotValidate('a.b');
-		shouldNotValidate('-1');
+		shouldNotValidate(' 0.1');
 		shouldNotValidate('1. 0');
 		shouldNotValidate('1..0');
 		shouldNotValidate('1.a');

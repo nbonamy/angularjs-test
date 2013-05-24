@@ -5,7 +5,7 @@ describe('Banking:Transactions', function() {
 		browser().navigateTo('/index.html');
 	});
 
-	describe('List', function() {
+	describe('Home', function() {
 
 		it('should have the right title', function() {
 			expect(element('title').text()).toEqual('Angular Transactions');
@@ -14,6 +14,10 @@ describe('Banking:Transactions', function() {
 		it('should redirect to transactions view', function() {
 			expect(browser().window().hash()).toEqual("/transactions");
 		});
+
+	});
+
+	describe('List', function() {
 
 		it('should list 5 transactions', function() {
 			expect(repeater('tr.transaction').count()).toEqual(5);

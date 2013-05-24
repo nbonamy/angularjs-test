@@ -7,9 +7,9 @@ files = [
   'test/e2e/**/*.js'
 ];
 
-watcher = true;
+watcher = false;
 
-singleRun = false;
+singleRun = true;
 
 browsers = ['Chrome'];
 
