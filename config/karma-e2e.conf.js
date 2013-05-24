@@ -19,7 +19,7 @@ proxies = {
   '/': 'http://localhost/angular/'
 };
 
-logLevel = LOG_DEBUG;
+logLevel = LOG_INFO;
 
 junitReporter = {
   outputFile: 'test_out/e2e.xml',
