@@ -24,7 +24,7 @@ app.directive('validPrice', function() {
 	return {
 		require: 'ngModel',
 		link: function(scope, elm, attrs, ctrl) {
-			var regex=/^\d*\.?\d{0,2}$/;
+			var regex=/^-?\d*\.?\d{0,2}$/;
 			ctrl.$parsers.unshift(function(viewValue) {
 				if (regex.test(viewValue)) {
 					ctrl.$setValidity('validPrice', true);
@@ -37,7 +37,6 @@ app.directive('validPrice', function() {
 		}
 	};
 });
-
 
 // configure accounting
 accounting.settings = {

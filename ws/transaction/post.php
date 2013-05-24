@@ -20,11 +20,11 @@ if ($transaction == null) {
 }
 
 // test check
-if (isset($input->amount) && $input->amount < 0) {
+/*if (isset($input->amount) && $input->amount < 0) {
 	header('HTTP/1.1 400 Bad Request');
 	echo('Amount cannot be negative');
 	exit();
-}
+}*/
 
 // update and save
 if (isset($input->instant))			$transaction->instant = $input->instant;
