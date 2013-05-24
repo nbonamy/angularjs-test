@@ -8,7 +8,7 @@ app.controller('TransactionDetailController', function($scope, $routeParams, $lo
 	// save selected transaction
 	$scope.save = function() {
 		
-		$scope.transaction.$save({id:$scope.transaction.id}, function() {
+		$scope.transaction.$save({}, function() {
 			app.setConfirm('Transaction successfully updated');
 			$scope.backToList();
 		}, function() {

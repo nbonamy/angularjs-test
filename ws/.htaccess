@@ -1,3 +1,6 @@
 Allow from all
+DirectorySlash Off
 RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+[^/])$ /angular/ws/index.php?type=$1&id= [QSA,L]
 RewriteRule ^(.*)/(.*)$ /angular/ws/index.php?type=$1&id=$2 [QSA,L]
