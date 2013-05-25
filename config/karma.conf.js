@@ -13,7 +13,6 @@ files = [
   'app/lib/jquery.bootstrap-growl.min.js',
   'test/lib/angular-mocks.js',
   'app/js/**/*.js',
-  'test/common/**/*.js',
   'test/unit/**/*.js'
 ];
 
